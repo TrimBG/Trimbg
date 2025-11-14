@@ -23,27 +23,22 @@ function createWindow() {
     // Menus
     const menuTemplate = [
         {
-            label: 'Help',
-            submenu: [
-                {
-                    label: 'About Us',
-                    click: () => {
-                        const { dialog } = require('electron');
-                        dialog.showMessageBox(mainWindow, {
-                            type: 'info',
-                            title: 'About TrimBG',
-                            message: `TrimBG - Version ${app.getVersion()}`,
-                            detail:
-                                `A fully custom, API-free tool for removing image backgrounds using pure JavaScript.
+            label: 'About Us',
+            click: () => {
+                const { dialog } = require('electron');
+                dialog.showMessageBox(mainWindow, {
+                    type: 'info',
+                    title: 'About TrimBG',
+                    message: `TrimBG - Version ${app.getVersion()}`,
+                    detail:
+                        `A fully custom, API-free tool for removing image backgrounds using pure JavaScript.
 
 Developer: Raymond Baghumian
 Github: https://github.com/Rayiumir/Trimbg`,
-                            buttons: ['OK'],
-                            icon: require('path').join(__dirname, '../icon/icon.png')
-                        });
-                    }
-                }
-            ]
+                    buttons: ['OK'],
+                    icon: require('path').join(__dirname, '../icon/icon.png')
+                });
+            }
         }
     ];
 
