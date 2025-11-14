@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Raymond Baghumian",
   "type": "commonjs",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder"
