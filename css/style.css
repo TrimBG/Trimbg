@@ -1,0 +1,182 @@
+:root {
+    --bg: #ffffff;
+    --text: #222;
+    --card: #f3f3f3;
+    --accent: #4a8cff;
+    --github: #000000;
+}
+
+body.dark {
+    --bg: #0d0d0d;
+    --text: #e4e4e4;
+    --card: #1a1a1a;
+    --accent: #70a6ff;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background .3s, color .3s;
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    animation: slideUp 1s ease;
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot {
+    margin-top: 50px;
+}
+
+.screenshot h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.screenshot-grid img {
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.screenshot-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Dark Mode Button */
+.dark-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background .3s, color .3s;
+}
+
+.download-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background .3s;
+}
+
+.download-btn:hover {
+    background: #2b6aff;
+}
+
+.github-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--github);
+    color: #fff;
+    padding: 14px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: background .3s;
+}
+
+.download-btn:hover {
+    background: #2b6aff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

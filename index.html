@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrimBG - Background Remover</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <button class="dark-toggle" onclick="toggleDark()">Dark Mode</button>
+
+    <header>
+        <img src="./icon/icon.png" alt="" srcset="">
+        <h1>TrimBG</h1>
+        <p>Offline & Fast Background Remover Built with JavaScript & Electron</p>
+        <a href="https://github.com/TrimBG/Trimbg/releases/tag/v1.0.0" class="download-btn"><img
+                src="./icon/download.png" style="width: 20px; height: 20px; margin: -15px 5px 0px 0px;"
+                alt="Download TrimBG" srcset="">Download for Linux - v1.0.0</a>
+        <a href="https://github.com/TrimBG/Trimbg" target="_blank" rel="noopener" class="github-btn"><img
+                src="./icon/github.png" style="width: 24px; height: 24px; margin: -15px 5px -5px 0px;"
+                alt="Download TrimBG" srcset="">TrimBG in Github</a>
+
+    </header>
+
+    <div class="container">
+
+        <section class="features">
+            <div class="card">
+                <h3>100% Offline Processing</h3>
+                <p>No API, no cloud. Everything happens locally on your machine.</p>
+            </div>
+
+            <div class="card">
+                <h3>One-Click Background Removal</h3>
+                <p>Just pick an image TrimBG does the rest instantly.</p>
+            </div>
+
+            <div class="card">
+                <h3>Drag & Drop</h3>
+                <p>Drag images directly into the app.</p>
+            </div>
+
+            <div class="card">
+                <h3>Easy Download</h3>
+                <p>Save processed images instantly.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fast Processing</h3>
+                <p>No limits, no waiting.</p>
+            </div>
+
+            <div class="card">
+                <h3>Optimized Algorithm</h3>
+                <p>Advanced color distance calculation.</p>
+            </div>
+
+            <div class="card">
+                <h3>Built with Electron</h3>
+                <p>Lightweight desktop app with clean UI and high performance.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript Engine</h3>
+                <p>Uses Canvas API & pixel-level color analysis with JS only.</p>
+            </div>
+        </section>
+
+        <!-- Screenshots -->
+        <section class="screenshot">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/1.png" alt="TrimBG Remove photo background - User interface" onclick="openLightbox(this.src)">
+                <img src="./screenshots/2.png" alt="TrimBG Remove photo background - User interface" onclick="openLightbox(this.src)">
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        function toggleDark() {
+            document.body.classList.toggle("dark");
+        }
+
+        function openLightbox(src) {
+            document.getElementById("lightbox-img").src = src;
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "TrimBG",
+            "operatingSystem": "Linux, Windows",
+            "applicationCategory": "GraphicsApplication",
+            "url": "https://github.com/TrimBG/Trimbg",
+            "image": "https://raw.githubusercontent.com/TrimBG/Trimbg/main/icon/icon.png",
+            "description": "TrimBG - Offline & Fast Background Remover Built with JavaScript & Electron",
+            "offers": {
+                "@type": "Offer",
+                "price": "0.0",
+                "priceCurrency": "USD"
+            }
+        }
+    </script>
+
+</body>
+
+</html>
